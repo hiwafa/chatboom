@@ -1,0 +1,5 @@
+livekit-agents==1.4.5
+livekit-plugins-google==1.4.5
+livekit-plugins-silero==1.4.5
+firebase-admin==7.2.0
+python-dotenv==1.1.1

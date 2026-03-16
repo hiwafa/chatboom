@@ -1,0 +1,45 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "chatboom-ai-4113c",
+          "appId": "1:349851174448:android:45269e724c5da8b28f0ff5",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "chatboom-ai-4113c",
+          "appId": "1:349851174448:ios:f1e3a9f1ca1f492c8f0ff5",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "chatboom-ai-4113c",
+          "configurations": {
+            "android": "1:349851174448:android:45269e724c5da8b28f0ff5",
+            "ios": "1:349851174448:ios:f1e3a9f1ca1f492c8f0ff5",
+            "web": "1:349851174448:web:01aaf39e7d494db88f0ff5"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

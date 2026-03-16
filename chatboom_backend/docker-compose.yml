@@ -1,0 +1,20 @@
+services:
+  answering_agent:
+    build: 
+      context: .
+      dockerfile: Dockerfile.agents
+    command: python agent.py start
+    env_file: .env
+    volumes:
+      - ./key.json:/app/key.json
+    restart: unless-stopped
+
+  copilot_agent:
+    build: 
+      context: .
+      dockerfile: Dockerfile.agents
+    command: python app_agent.py start
+    env_file: .env
+    volumes:
+      - ./key.json:/app/key.json
+    restart: unless-stopped
