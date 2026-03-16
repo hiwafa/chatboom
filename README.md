@@ -113,3 +113,33 @@ Now that the brain and the servers are running, it's time to build the apps.
 2.  Run `flutter build ipa`
 3.  Open the `.xcworkspace` in Xcode, configure your Apple Developer signing certificates, and upload to App Store Connect or TestFlight.
 
+
+## 🧪 Reproducible Testing Instructions
+
+To properly test Chatboom's AI features, we recommend using two separate accounts (or two browser windows/devices) to simulate a real conversation.
+
+### Prerequisites
+1. Open the Live Web App URL (or clone the repo and run `flutter run -d chrome`).
+2. Create two test accounts (e.g., User A and User B).
+
+### Test Case 1: The AI Answering Machine
+1. Log in as **User A**. Go to the `Profile` tab and toggle **"Enable AI Agent"** to ON. Set a custom prompt like: *"I am out grabbing coffee, please leave a message."*
+2. Log in as **User B** on a different device or incognito window.
+3. As User B, find User A in the `Chats` tab and open the chat.
+4. Click the **"Call Agent"** button at the top of the screen. 
+5. Wait for the connection, and speak to the AI! Notice how it uses the custom prompt.
+6. Say goodbye and hang up. 
+7. Switch back to **User A**, navigate to the `Notes` tab, and view the AI-generated summary of the call.
+
+### Test Case 2: The UI Copilot
+1. Log in to any account and click the floating **"My AI"** button on the bottom right.
+2. Once the AI connects (the orb glows blue), speak naturally and say: *"Navigate to my profile."* Watch the app change tabs automatically.
+3. Say: *"Open my chat with [Other User's Name]."* 4. Once the chat opens, say: *"Draft a message saying I will be 10 minutes late."*
+5. The AI will type the message into the input box and ask you if it should send it!
+
+### Test Case 3: AI Study Mode
+1. Click the **"My AI"** button to summon the Copilot.
+2. Say: *"Create a new study deck about the Solar System."*
+3. The AI will automatically navigate to the Study tab, create the deck, and generate the flashcards.
+4. Once generated, tell the AI to *"Flip the card"* or *"Go to the next card"* entirely hands-free.
+
